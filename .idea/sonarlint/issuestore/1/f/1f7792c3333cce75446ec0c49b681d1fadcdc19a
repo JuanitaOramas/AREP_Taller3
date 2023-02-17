@@ -1,0 +1,6 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÑÜòø
+\
+java:S1117	"?Rename "jsonResponse" which hides the field declared at line 4.(Ï¡÷Œ8¦»éå0
+M
+java:S1068"0Remove this unused "jsonResponse" private field.(¦¬ıÇ8¥Û™éå0

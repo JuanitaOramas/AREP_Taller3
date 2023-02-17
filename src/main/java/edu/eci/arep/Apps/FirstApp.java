@@ -1,23 +1,34 @@
 package edu.eci.arep.Apps;
 
-import edu.eci.arep.Services.CssService;
-import edu.eci.arep.Services.HTMLService;
-import edu.eci.arep.Services.ImgService;
-import edu.eci.arep.Services.JavaScriptService;
+import edu.eci.arep.Services.HTMLSparkPOSTService;
+import edu.eci.arep.Services.HTMLSparkService;
+import edu.eci.arep.Services.SparkJsonService;
 
 import java.io.IOException;
+
+import static edu.eci.arep.Apps.HttpServer.*;
 
 public class FirstApp {
     public static void main(String args[]) throws IOException {
         HttpServer server = HttpServer.getInstance();
+        String aplicationJson;
 
-        //Agregar servicios
-        server.addService("/html", new HTMLService());
-        server.addService("/style", new CssService());
-        server.addService("/img", new ImgService());
-        server.addService("/js", new JavaScriptService());
+        //Agregar servicios con funciones lambda
+
+        //tipo get
+        get("/spark", (request) -> new HTMLSparkService().getResponse(request));
+        //tipo post
+
+        post("/post", (request) -> new HTMLSparkPOSTService().getResponse(request));
+
+        get("/json", (request) -> new SparkJsonService().getResponse(request), "application/json");
+
+
+
         server.run(args);
     }
+
+
 
 
 }

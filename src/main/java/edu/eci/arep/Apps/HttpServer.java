@@ -6,7 +6,7 @@ package edu.eci.arep.Apps;
 
 import edu.eci.arep.Cache;
 import edu.eci.arep.HttpConection;
-import edu.eci.arep.Services.RESTService;
+import edu.eci.arep.Services.SparkService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,7 +30,7 @@ public class HttpServer {
      */
 
     private static HttpServer _instance = new HttpServer(); // la carga el class loader
-    private static Map<String, RESTService> services = new HashMap();
+    private static Map<String, SparkService> sparkMap = new HashMap();
     private HttpServer() {};
     static HttpServer getInstance(){return _instance;}
 
@@ -88,7 +88,7 @@ public class HttpServer {
             //outputLine = "HTTP/1.1 200 OK\r\n"   + "\r\n" + htmlWithForms(cacheData); // jsonSimple
 
             if (urlprincipal.getPath().contains("/apps/")) { // localhost:35000/apps/hello
-                outputLine = executeService(urlprincipal.getPath().substring(5)); // /apps/hello toma solo hello
+                outputLine = executeSparkService(urlprincipal.getPath().substring(5), urlprincipal.getQuery()); // /apps/hello
             } else {
                 outputLine = "HTTP/1.1 200 OK\r\n"   + "\r\n" + htmlWithForms(cacheData);
             }
@@ -107,19 +107,28 @@ public class HttpServer {
     }
 
     //
-    public String executeService(String serviceName) {
-        RESTService rs= services.get(serviceName);
-        String header = rs.getHeader();
-        String body = rs.getResponse(); // lectura de disco al body
-        return header + body;
+    public String executeSparkService(String serviceName, String request) {
+        System.out.println(request);
+        SparkService rs= sparkMap.get(serviceName);
+        if (rs != null){
+            String body = rs.getResponse(request); // lectura de disco al body
+            return  body;
+        }
+
+        return null;
     }
 
-    //
-    public void addService(String key, RESTService service){
-        services.put(key, service);
+
+    //get
+    public static void get (String key, SparkService service){
+        sparkMap.put(key, service);
+
     }
 
+    public static void get (String key, SparkService service, String contenType){
+        sparkMap.put(key, service);
 
+    }
 
 
     public static String htmlWithForms(String cacheData){
@@ -155,6 +164,12 @@ public class HttpServer {
                 "\n" +
                 "    </body>\n" +
                 "</html>";
+
+    }
+
+    // post
+    public static void post (String key, SparkService service){
+        sparkMap.put(key, service);
 
     }
 

@@ -1,0 +1,11 @@
+
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÑÜòø8ÊÆÅçå0
+}
+java:S1450"[Remove the "httpResponse" field and declare it as a local variable in the relevant methods.(©¬»úûÿÿÿÿ8·Î«çå0
+a
+java:S1854"?Remove this useless assignment to local variable "fileContent".(“¼’Ìüÿÿÿÿ8‡ßªçå0
+M
+java:S1481"0Remove this unused "fileContent" local variable.(”†Ûë8ˆßªçå0
+=
+java:S2129" Remove this "String" constructor(¢²ü°8‹ßªçå0

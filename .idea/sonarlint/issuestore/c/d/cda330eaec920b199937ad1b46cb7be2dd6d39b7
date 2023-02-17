@@ -1,4 +1,12 @@
 
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠÚ»”
 E
-java:S1197"*Move the array designators [] to the type.(²Á€œüÿÿÿÿ
+java:S1197"*Move the array designators [] to the type.(²Á€œüÿÿÿÿ
+N
+java:S1481"3Remove this unused "aplicationJson" local variable.(Œ„£ûÿÿÿÿ
+K
+java:S1611"5Remove the parentheses around the "request" parameter(¯†Õˆ
+K
+java:S1611"5Remove the parentheses around the "request" parameter(ÖÁ¿È
+K
+java:S1611"5Remove the parentheses around the "request" parameter(æ¥æ±

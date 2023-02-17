@@ -1,4 +1,4 @@
-# Taller 2: Aplicaciones distribuidas
+# Taller 3: Aplicaciones distribuidas
  
 ## TALLER DISEÑO Y ESTRUCTURACIÓN DE APLICACIONES DISTRIBUIDAS EN INTERNET
 
@@ -12,7 +12,7 @@ Servidor web que soporte múltiples solicitudes seguidas (no concurrentes). El s
 ### Instrucciones de uso
 Para poder usar el proyecto lo primero que debe realizar es clonar este repositorio utilizando el siguiente comando desde la terminal del SO que este utilizando:
 ```
-git clone https://github.com/JuanitaOramas/AREP_TALLER2.git
+git clone https://github.com/JuanitaOramas/AREP_TALLER3.git
 ```
 Luego debe redirigirse por medio de la terminal al directorio raíz la cual contiene el achivo pom.xml.
 

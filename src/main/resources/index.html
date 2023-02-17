@@ -4,8 +4,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>AREP_Taller2</title>
-    <link rel="stylesheet" type="text/css" href="http://localhost:35000/apps/style">
+    <title>AREP_Taller3</title>
+
 </head>
 <body>
 <header>
@@ -24,18 +24,33 @@
             <li>Javascript</li>
         </ul>
     </section>
-    <section id="contact">
+    <section id="information">
         <h2>Escribe tus sugerencias para este sitio</h2>
         <form>
             <label for="informacion">Informacion:</label>
             <input type="text" id="informacion" name="informacion"><br><br>
-            <button type="send">send</button>
+            <button type="send" onclick="EnviarInformacion()">Enviar</button>
 
         </form>
     </section>
 
 </main>
 <script src="http://localhost:35000/apps/js"></script>
+
+
+<script >
+    function EnviarInformacion() {
+
+    fetch('http://localhost:35000/spark/post', {
+        method: 'POST'
+    })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+}
+</script>
+
 
 </body>
 </html>

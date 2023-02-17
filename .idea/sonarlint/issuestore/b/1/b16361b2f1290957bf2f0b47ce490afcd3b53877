@@ -1,6 +1,8 @@
 
 E
-java:S3740!"/Provide the parametrized type for this generic.(™ı™è
+java:S3740!"/Provide the parametrized type for this generic.(‰¹Ñ
+w
+java:S1488r"\Immediately return this expression instead of assigning it to the temporary variable "body".(†—‚Öüÿÿÿÿ
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠÚ»”
 _
 java:S2095/"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(‰ßå
@@ -19,3 +21,6 @@ N	java:S1068"9Replace this use of System.out or System.err by a logger.(ËĞñä
 N	java:S106;"9Replace this use of System.out or System.err by a logger.(Ì½æ©
 N	java:S106I"9Replace this use of System.out or System.err by a logger.(ƒ°Ğ
 N	java:S106W"9Replace this use of System.out or System.err by a logger.(Ú°òİ
+S	java:S106o"9Replace this use of System.out or System.err by a logger.(¶®éÓøÿÿÿÿ
+M
+java:S1172€"1Remove this unused method parameter "contenType".(Æÿöşÿÿÿÿ
